@@ -1,0 +1,3 @@
+[submodule "edx-ansible"]
+	path = edx-ansible
+	url = https://github.com/edx/configuration.git
