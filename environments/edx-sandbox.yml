@@ -25,5 +25,5 @@ NGINX_SSL_KEY: 'secrets/tls/d.mitx-wildcard-key.pem'
 
 # Ask search bots to not index sandboxes
 NGINX_ROBOT_RULES:
-  agent: '*'
-  disallow: '/'
+  - agent: '*'
+    disallow: '/'
