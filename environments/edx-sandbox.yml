@@ -1,0 +1,29 @@
+edx_platform_version: 'master'
+
+# High level sandbox configuration
+SANDBOX_NAME: 'sandbox'
+SANDBOX_ZONE: 'd.mitx.mit.edu'
+
+SANDBOX_DOMAIN: '{{ SANDBOX_NAME }}.{{ SANDBOX_ZONE }}'
+
+# Nginx sites overrides
+EDXAPP_PREVIEW_LMS_BASE: 'preview.{{ SANDBOX_DOMAIN }}'
+EDXAPP_LMS_BASE: '{{ SANDBOX_DOMAIN }}'
+EDXAPP_CMS_BASE: 'studio-{{ SANDBOX_DOMAIN }}'
+
+EDXAPP_LMS_PREVIEW_NGINX_PORT: 80
+EDXAPP_CMS_NGINX_PORT: 80
+EDXAPP_LMS_NGINX_PORT: 80
+
+# Configure TLS
+NGINX_ENABLE_SSL: True
+NGINX_REDIRECT_TO_HTTPS: True
+NGINX_HTTPS_REDIRECT_STRATEGY: "scheme"
+
+NGINX_SSL_CERTIFICATE: 'secrets/tls/d.mitx-wildcard-cert.pem'
+NGINX_SSL_KEY: 'secrets/tls/d.mitx-wildcard-key.pem'
+
+# Ask search bots to not index sandboxes
+NGINX_ROBOT_RULES:
+  agent: '*'
+  disallow: '/'
