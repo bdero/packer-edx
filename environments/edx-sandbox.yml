@@ -25,6 +25,11 @@ NGINX_REDIRECT_TO_HTTPS: True
 NGINX_SSL_CERTIFICATE: 'secrets/tls/d.mitx-wildcard-cert.pem'
 NGINX_SSL_KEY: 'secrets/tls/d.mitx-wildcard-key.pem'
 
+# Configure HTTP auth
+COMMON_ENABLE_BASIC_AUTH: True
+COMMON_HTPASSWD_USER: edx
+COMMON_HTPASSWD_PASS: edx
+
 # Ask search bots to not index sandboxes
 NGINX_ROBOT_RULES:
   - agent: '*'
