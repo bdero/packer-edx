@@ -15,9 +15,9 @@
   }],
   "provisioners": [{
     "type": "ansible",
-    "playbook_file": "./edx_sandbox.yml",
+    "playbook_file": "edx-ansible/playbooks/edx_sandbox.yml",
     "extra_arguments": [
-      "--extra-vars", "\"@../../environments/edx-sandbox.yml\""
+      "--extra-vars", "@environments/edx-sandbox.yml"
     ]
   }]
 }
