@@ -15,6 +15,16 @@
   }],
   "provisioners": [
     {
+      "type": "file",
+      "source": "edx-ansible/pre-requirements.txt",
+      "destination": "pre-requirements.txt"
+    },
+    {
+      "type": "file",
+      "source": "edx-ansible/requirements.txt",
+      "destination": "requirements.txt"
+    },
+    {
       "type": "shell",
       "script": "setup_ansible.sh"
     },
@@ -22,6 +32,7 @@
       "type": "ansible-local",
       "playbook_file": "edx-ansible/playbooks/edx_sandbox.yml",
       "playbook_dir": "./",
+      "staging_directory": "/tmp/packer-provisioner-ansible-local",
       "extra_arguments": [
         "--extra-vars", "@environments/edx-sandbox.yml"
       ]
