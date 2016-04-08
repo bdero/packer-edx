@@ -3,11 +3,7 @@
 # Install python
 
 sudo apt-get --yes update
-sudo apt-get --yes install git python2.7 python-dev libmysqlclient-dev --upgrade
-
-# Install setuptools
-curl -0 http://peak.telecommunity.com/dist/ez_setup.py > /tmp/ez_setup.py
-sudo python /tmp/ez_setup.py
+sudo apt-get --yes install git python2.7 python-dev python-setuptools libmysqlclient-dev --upgrade
 
 # Install pip
 sudo easy_install pip
