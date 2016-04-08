@@ -2,11 +2,8 @@
 
 # Install python
 
-# Running `apt-get update` this early results in git's dependency chain
-# breaking (liberror-perl), so don't.
-#sudo apt-get --yes update
-
-sudo apt-get --yes install python2.7 git libmysqlclient-dev --upgrade
+sudo apt-get --yes update
+sudo apt-get --yes install git python2.7 python-dev libmysqlclient-dev --upgrade
 
 # Install setuptools
 curl -0 http://peak.telecommunity.com/dist/ez_setup.py > /tmp/ez_setup.py
