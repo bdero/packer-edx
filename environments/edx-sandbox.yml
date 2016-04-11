@@ -1,4 +1,5 @@
 edx_platform_version: 'master'
+edx_platform_repo: 'https://github.com/edx/edx-platform.git'
 
 # High level sandbox configuration
 SANDBOX_NAME: 'micromasters'
